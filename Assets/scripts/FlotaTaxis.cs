@@ -14,6 +14,7 @@ public class FlotaTaxis : MonoBehaviour
     void Start()
     {
         float litrosXDia = cantidadDeUnidades * periodoDeDias * 90 / 15;
+        float costoTotalCombustible = precioXDia * cantidadDeUnidades * periodoDeDias;
 
 
         if (cantidadDeUnidades < 1)
@@ -31,13 +32,13 @@ public class FlotaTaxis : MonoBehaviour
         if(litrosXDia >= 100)
         {
             Debug.Log("Una flota de " + cantidadDeUnidades + " unidades trabajando durante " + periodoDeDias + " días implicaría un gasto de " +
-            precioXDia * cantidadDeUnidades * periodoDeDias *0.8 + " pesos en concepto de combustible, ahorrando " + precioXDia * cantidadDeUnidades * periodoDeDias* 0.2 + " pesos" +
-            " por descuento con covenio con estación de servicio.");
+            costoTotalCombustible * 0.8 + " pesos en concepto de combustible, ahorrando " + costoTotalCombustible * 0.2 + " pesos" + 
+            " por descuento con convenio de estación de servicio.");
         }
         else
         {
             Debug.Log("Una flota de " + cantidadDeUnidades + " unidades trabajando durante " + periodoDeDias + " días implicaría un gasto de " +
-            precioXDia * cantidadDeUnidades * periodoDeDias + " pesos en concepto de combustible.");
+            costoTotalCombustible + " pesos en concepto de combustible.");
         }
 
     }

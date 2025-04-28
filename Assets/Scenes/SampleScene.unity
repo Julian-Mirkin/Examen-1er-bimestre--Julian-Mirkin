@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cantidadDeUnidades: 10
-  periodoDeDias: 5
+  periodoDeDias: 10
 --- !u!4 &1216454437
 Transform:
   m_ObjectHideFlags: 0
